@@ -6,34 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title>AETHERIA | The Future of AI Operating System</title>
-    <meta name="title" content="AETHERIA | The Future of AI Operating System">
-    <meta name="description" content="Platform AI tercanggih dengan antarmuka Aura UI. Solusi cerdas untuk bisnis masa depan. Terintegrasi, cepat, dan aman.">
-    <meta name="keywords" content="AI platform, aura ui, operating system, saas, startup teknologi, aetheria, artificial intelligence">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Aetheria Corp">
-    <link rel="canonical" href="https://ciledugpromo.biz.id/aetheria">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ciledugpromo.biz.id/aetheria">
-    <meta property="og:title" content="AETHERIA | Build Faster with Aura Intelligence">
-    <meta property="og:description" content="Experience the next generation of AI interface. Fluid, fast, and phenomenal.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Aetheria",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "Platform AI generasi terbaru dengan antarmuka Aura UI."
-    }
-    </script>
+    <meta name="description" content="Platform AI tercanggih dengan antarmuka Aura UI. Solusi cerdas untuk bisnis masa depan.">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 
@@ -47,36 +20,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        /* --- AURA.BUILD VISUAL STYLE --- */
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* 1. BACKGROUND AURORA (BERGERAK) */
-        .aura-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;
-            background: #000;
-        }
-        .aura-blob {
-            position: absolute;
-            filter: blur(80px);
-            opacity: 0.5;
-            animation: float-aura 10s infinite ease-in-out alternate;
-            border-radius: 50%;
-        }
+        /* AURA BACKGROUND */
+        .aura-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #000; }
+        .aura-blob { position: absolute; filter: blur(80px); opacity: 0.5; animation: float-aura 10s infinite ease-in-out alternate; border-radius: 50%; }
         .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, #4f46e5 0%, transparent 70%); animation-duration: 15s; }
         .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: radial-gradient(circle, #9333ea 0%, transparent 70%); animation-duration: 12s; }
         .blob-3 { top: 40%; left: 40%; width: 40vw; height: 40vw; background: radial-gradient(circle, #22d3ee 0%, transparent 70%); animation-delay: -5s; opacity: 0.3; }
+        @keyframes float-aura { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -30px) scale(1.1); } }
 
-        @keyframes float-aura {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(30px, -30px) scale(1.1); }
-        }
-
-        /* GRID PATTERN (Tech Feel) */
+        /* GRID PATTERN */
         .grid-overlay {
             position: fixed; inset: 0; z-index: -1;
             background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -85,88 +39,57 @@
             mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
         }
 
-        /* 2. SPOTLIGHT CARD (Mouse Tracking - Aura Style) */
+        /* SPOTLIGHT CARD */
         .spotlight-card {
-            position: relative;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
+            position: relative; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); overflow: hidden; transition: transform 0.2s, border-color 0.2s;
         }
         .spotlight-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
-            opacity: 0;
-            transition: opacity 0.5s;
-            pointer-events: none;
-            z-index: 1;
+            opacity: 0; transition: opacity 0.5s; pointer-events: none; z-index: 1;
         }
         .spotlight-card:hover::before { opacity: 1; }
         .spotlight-card:hover { border-color: rgba(255, 255, 255, 0.2); }
         .spotlight-content { position: relative; z-index: 2; }
 
-        /* 3. BUTTON BORDER BEAM (Bombastis) */
+        /* BUTTON BEAM */
         .btn-beam {
-            position: relative;
-            background: #000;
-            color: #fff;
-            padding: 14px 36px;
-            border-radius: 9999px;
-            font-weight: 600;
-            overflow: hidden;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s;
+            position: relative; background: #000; color: #fff; padding: 14px 36px; border-radius: 9999px; font-weight: 600; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; transition: transform 0.2s;
         }
         .btn-beam:hover { transform: scale(1.05); }
-        /* Garis berputar */
         .btn-beam::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
             background: conic-gradient(from 0deg, transparent 0%, transparent 80%, #a855f7 90%, #fff 100%);
             animation: beam-spin 3s linear infinite;
         }
-        /* Masking dalam */
-        .btn-beam::after {
-            content: '';
-            position: absolute;
-            inset: 1.5px;
-            background: #050505;
-            border-radius: 9999px;
-            z-index: 0;
-        }
+        .btn-beam::after { content: ''; position: absolute; inset: 1.5px; background: #050505; border-radius: 9999px; z-index: 0; }
         .btn-content { position: relative; z-index: 1; display: flex; align-items: center; gap: 8px; }
-        
         @keyframes beam-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        /* TEXT SHIMMER (Kilau) */
+        /* TEXT SHIMMER */
         .text-shimmer {
-            background: linear-gradient(to right, #a855f7, #fff 50%, #3b82f6);
-            background-size: 200% auto;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            animation: text-shine 5s linear infinite;
+            background: linear-gradient(to right, #a855f7, #fff 50%, #3b82f6); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: text-shine 5s linear infinite;
         }
         @keyframes text-shine { to { background-position: 200% center; } }
 
-        /* MAP GRAYSCALE */
-        .map-frame iframe {
-            filter: grayscale(100%) invert(92%) contrast(83%);
-            border-radius: 1rem;
-            transition: filter 0.3s;
+        /* DASHBOARD ANIMATIONS */
+        .dash-shimmer {
+            position: relative; overflow: hidden;
         }
+        .dash-shimmer::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transform: translateX(-100%);
+            animation: dash-shine 3s infinite;
+        }
+        @keyframes dash-shine { 100% { transform: translateX(100%); } }
+
+        /* MAP */
+        .map-frame iframe { filter: grayscale(100%) invert(92%) contrast(83%); border-radius: 1rem; transition: filter 0.3s; }
         .map-frame:hover iframe { filter: grayscale(0%) invert(0%); }
 
-        /* MAGNETIC WHATSAPP */
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
-            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); }
-        }
+        /* WHATSAPP PULSE */
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); } 50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); } }
         .whatsapp-glow { animation: pulse-glow 2s infinite; }
     </style>
 </head>
@@ -202,7 +125,7 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            SYSTEM V12.0 ONLINE
+            SYSTEM V12.5 ONLINE
         </div>
 
         <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-[1.1]" style="font-family: 'Outfit', sans-serif;">
@@ -211,8 +134,7 @@
         </h1>
 
         <p class="text-gray-400 max-w-2xl text-lg mb-10 leading-relaxed mx-auto">
-            Platform AI generasi terbaru yang menggabungkan keindahan visual dan kecerdasan komputasi. 
-            <span class="text-white font-medium">Lebih Cepat. Lebih Cerdas. Lebih Fenomenal.</span>
+            Platform AI generasi terbaru. <span class="text-white font-medium">Lebih Cepat. Lebih Cerdas. Lebih Fenomenal.</span>
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 mb-20 items-center justify-center">
@@ -227,10 +149,62 @@
             </button>
         </div>
 
-        <div class="relative w-full max-w-5xl mx-auto rounded-xl border border-white/10 bg-[#0a0a0a] p-2 shadow-[0_0_50px_rgba(168,85,247,0.2)] transform hover:scale-[1.02] transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-transparent pointer-events-none rounded-xl"></div>
-            <img src="https://cdn.dribbble.com/users/418188/screenshots/16386566/media/58509311667104d538622c544e3d304c.png?resize=1200x900&vertical=center" 
-                 alt="Aetheria Dashboard" class="w-full rounded-lg opacity-90 hover:opacity-100 transition-opacity">
+        <div class="relative w-full max-w-5xl mx-auto rounded-xl border border-white/10 bg-[#0a0a0a]/80 backdrop-blur-xl p-2 shadow-[0_0_50px_rgba(168,85,247,0.15)] transform hover:scale-[1.01] transition-transform duration-500 dashboard-mockup group">
+            
+            <div class="h-8 bg-white/5 border-b border-white/5 rounded-t-lg flex items-center px-4 gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+            </div>
+
+            <div class="grid grid-cols-12 h-[400px] md:h-[500px] overflow-hidden bg-[#050505]">
+                
+                <div class="col-span-3 border-r border-white/5 p-4 hidden md:flex flex-col gap-4">
+                    <div class="h-8 w-24 bg-white/10 rounded dash-shimmer"></div>
+                    <div class="space-y-2 mt-4">
+                        <div class="h-6 w-full bg-white/5 rounded dash-shimmer" style="animation-delay: 0.1s"></div>
+                        <div class="h-6 w-full bg-transparent rounded hover:bg-white/5 transition border border-transparent hover:border-white/5 cursor-pointer"></div>
+                        <div class="h-6 w-full bg-transparent rounded hover:bg-white/5 transition border border-transparent hover:border-white/5 cursor-pointer"></div>
+                    </div>
+                    <div class="mt-auto h-12 w-full bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded border border-white/5 p-2">
+                        <div class="h-full w-2/3 bg-white/10 rounded"></div>
+                    </div>
+                </div>
+
+                <div class="col-span-12 md:col-span-9 p-6 relative">
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="h-8 w-48 bg-white/5 rounded dash-shimmer"></div>
+                        <div class="w-8 h-8 rounded-full bg-purple-500/20 border border-purple-500/50"></div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <div class="h-24 bg-white/5 rounded-xl border border-white/5 p-3 flex flex-col justify-between dash-shimmer" style="animation-delay: 0.2s">
+                            <div class="w-8 h-8 bg-purple-500/20 rounded flex items-center justify-center text-purple-400"><i class="fa-solid fa-chart-pie text-xs"></i></div>
+                            <div class="h-2 w-16 bg-white/10 rounded"></div>
+                        </div>
+                        <div class="h-24 bg-white/5 rounded-xl border border-white/5 p-3 flex flex-col justify-between dash-shimmer" style="animation-delay: 0.3s">
+                            <div class="w-8 h-8 bg-blue-500/20 rounded flex items-center justify-center text-blue-400"><i class="fa-solid fa-users text-xs"></i></div>
+                            <div class="h-2 w-16 bg-white/10 rounded"></div>
+                        </div>
+                        <div class="h-24 bg-white/5 rounded-xl border border-white/5 p-3 flex flex-col justify-between dash-shimmer" style="animation-delay: 0.4s">
+                            <div class="w-8 h-8 bg-green-500/20 rounded flex items-center justify-center text-green-400"><i class="fa-solid fa-bolt text-xs"></i></div>
+                            <div class="h-2 w-16 bg-white/10 rounded"></div>
+                        </div>
+                    </div>
+
+                    <div class="h-48 w-full bg-white/5 rounded-xl border border-white/5 relative overflow-hidden flex items-end px-4 pb-0 gap-2">
+                        <div class="w-full bg-purple-500/20 h-[30%] rounded-t transition-all duration-1000 group-hover:h-[50%]"></div>
+                        <div class="w-full bg-purple-500/30 h-[50%] rounded-t transition-all duration-1000 group-hover:h-[70%]"></div>
+                        <div class="w-full bg-purple-500/40 h-[40%] rounded-t transition-all duration-1000 group-hover:h-[60%]"></div>
+                        <div class="w-full bg-purple-500/50 h-[70%] rounded-t transition-all duration-1000 group-hover:h-[80%]"></div>
+                        <div class="w-full bg-purple-500/60 h-[50%] rounded-t transition-all duration-1000 group-hover:h-[90%]"></div>
+                        <div class="w-full bg-purple-500/80 h-[80%] rounded-t transition-all duration-1000 group-hover:h-[40%]"></div>
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
 
@@ -250,7 +224,7 @@
                                 <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-2">Aura Intelligence</h3>
-                            <p class="text-gray-400">AI yang memprediksi kebutuhan Anda sebelum Anda memintanya. </p>
+                            <p class="text-gray-400">AI yang memprediksi kebutuhan Anda sebelum Anda memintanya.</p>
                         </div>
                         <div class="w-full h-1/2 bg-gradient-to-r from-purple-500/20 to-transparent rounded-xl border border-white/5 mt-4 relative overflow-hidden">
                             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
@@ -264,7 +238,7 @@
                             <i class="fa-solid fa-shield-cat text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Quantum Secure</h3>
-                        <p class="text-gray-400">Enkripsi level militer. Data Anda aman di dalam vault digital kami.</p>
+                        <p class="text-gray-400">Enkripsi level militer. Data Anda aman.</p>
                         <div class="mt-8 flex justify-center">
                             <i class="fa-solid fa-fingerprint text-6xl text-white/10 group-hover:text-blue-500/40 transition-colors duration-500"></i>
                         </div>
@@ -300,7 +274,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -328,20 +301,16 @@
                         <i class="fa-brands fa-twitter text-2xl text-blue-400"></i>
                         <span>@aetheria_tech</span>
                     </a>
-                    <a href="mailto:hello@aetheria.com" class="block p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition flex items-center gap-4">
-                        <i class="fa-solid fa-envelope text-2xl text-green-400"></i>
-                        <span>hello@aetheria.com</span>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="py-10 bg-black text-center border-t border-white/10 text-gray-600 text-sm">
-        <p>&copy; 2026 Aetheria Inc. Powered by <a href="#" class="text-gray-500 hover:text-white">CiledugPromo Network</a>.</p>
+        <p>© 2026 Aetheria Inc. Powered by <a href="#" class="text-gray-500 hover:text-white">CiledugPromo Network</a>.</p>
     </footer>
 
-    <a href="https://wa.me/6285283212205?text=Halo%20Admin%20Aetheria,%20saya%20tertarik%20dengan%20platform%20ini." 
+    <a href="https://wa.me/6285283212205?text=Halo%20Admin%20Aetheria" 
        class="fixed bottom-8 right-8 z-[100] group">
         <div class="relative flex items-center justify-center">
             <div class="absolute inset-0 rounded-full bg-green-500 blur-xl opacity-50 whatsapp-glow"></div>
@@ -355,49 +324,29 @@
     </a>
 
     <script>
-        // --- 1. SPOTLIGHT EFFECT (MOUSE TRACKING) ---
+        // MOUSE TRACKING SPOTLIGHT
         const cards = document.querySelectorAll('.spotlight-card');
         const container = document.getElementById('cards-container');
-
         if(container) {
             container.onmousemove = e => {
                 for(const card of cards) {
                     const rect = card.getBoundingClientRect(),
                           x = e.clientX - rect.left,
                           y = e.clientY - rect.top;
-
                     card.style.setProperty("--mouse-x", `${x}px`);
                     card.style.setProperty("--mouse-y", `${y}px`);
                 }
             };
         }
 
-        // --- 2. GSAP REVEAL ANIMATIONS ---
+        // GSAP ANIMATION
         gsap.registerPlugin(ScrollTrigger);
-
-        // Hero Content
         gsap.from("h1", { duration: 1.5, y: 50, opacity: 0, ease: "power4.out", delay: 0.2 });
-        gsap.from(".dashboard-mockup", { 
-            duration: 1.5, 
-            y: 100, 
-            opacity: 0, 
-            rotationX: 20, 
-            ease: "power4.out", 
-            delay: 0.5 
-        });
-
-        // Features Reveal
+        gsap.from(".dashboard-mockup", { duration: 1.5, y: 100, opacity: 0, rotationX: 20, ease: "power4.out", delay: 0.5 });
         gsap.utils.toArray('.spotlight-card').forEach((card, i) => {
             gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power2.out",
-                delay: i * 0.1
+                scrollTrigger: { trigger: card, start: "top 90%" },
+                y: 50, opacity: 0, duration: 0.8, ease: "power2.out", delay: i * 0.1
             });
         });
     </script>
