@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>AETHERIA | The Future of AI Operating System</title>
+    <meta name="title" content="AETHERIA | The Future of AI Operating System">
+    <meta name="description" content="Platform AI tercanggih dengan antarmuka Aura UI. Solusi cerdas untuk bisnis masa depan. Terintegrasi, cepat, dan aman.">
+    <meta name="keywords" content="AI platform, aura ui, operating system, saas, startup teknologi, aetheria, artificial intelligence">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Aetheria Corp">
+    <link rel="canonical" href="https://ciledugpromo.biz.id/aetheria">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ciledugpromo.biz.id/aetheria">
+    <meta property="og:title" content="AETHERIA | Build Faster with Aura Intelligence">
+    <meta property="og:description" content="Experience the next generation of AI interface. Fluid, fast, and phenomenal.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Aetheria",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Platform AI generasi terbaru dengan antarmuka Aura UI."
+    }
+    </script>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* --- AURA.BUILD VISUAL STYLE --- */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* 1. BACKGROUND AURORA (BERGERAK) */
+        .aura-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;
+            background: #000;
+        }
+        .aura-blob {
+            position: absolute;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: float-aura 10s infinite ease-in-out alternate;
+            border-radius: 50%;
+        }
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, #4f46e5 0%, transparent 70%); animation-duration: 15s; }
+        .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: radial-gradient(circle, #9333ea 0%, transparent 70%); animation-duration: 12s; }
+        .blob-3 { top: 40%; left: 40%; width: 40vw; height: 40vw; background: radial-gradient(circle, #22d3ee 0%, transparent 70%); animation-delay: -5s; opacity: 0.3; }
+
+        @keyframes float-aura {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -30px) scale(1.1); }
+        }
+
+        /* GRID PATTERN (Tech Feel) */
+        .grid-overlay {
+            position: fixed; inset: 0; z-index: -1;
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+        }
+
+        /* 2. SPOTLIGHT CARD (Mouse Tracking - Aura Style) */
+        .spotlight-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .spotlight-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .spotlight-card:hover::before { opacity: 1; }
+        .spotlight-card:hover { border-color: rgba(255, 255, 255, 0.2); }
+        .spotlight-content { position: relative; z-index: 2; }
+
+        /* 3. BUTTON BORDER BEAM (Bombastis) */
+        .btn-beam {
+            position: relative;
+            background: #000;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 9999px;
+            font-weight: 600;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+        }
+        .btn-beam:hover { transform: scale(1.05); }
+        /* Garis berputar */
+        .btn-beam::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: conic-gradient(from 0deg, transparent 0%, transparent 80%, #a855f7 90%, #fff 100%);
+            animation: beam-spin 3s linear infinite;
+        }
+        /* Masking dalam */
+        .btn-beam::after {
+            content: '';
+            position: absolute;
+            inset: 1.5px;
+            background: #050505;
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        .btn-content { position: relative; z-index: 1; display: flex; align-items: center; gap: 8px; }
+        
+        @keyframes beam-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* TEXT SHIMMER (Kilau) */
+        .text-shimmer {
+            background: linear-gradient(to right, #a855f7, #fff 50%, #3b82f6);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: text-shine 5s linear infinite;
+        }
+        @keyframes text-shine { to { background-position: 200% center; } }
+
+        /* MAP GRAYSCALE */
+        .map-frame iframe {
+            filter: grayscale(100%) invert(92%) contrast(83%);
+            border-radius: 1rem;
+            transition: filter 0.3s;
+        }
+        .map-frame:hover iframe { filter: grayscale(0%) invert(0%); }
+
+        /* MAGNETIC WHATSAPP */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); }
+        }
+        .whatsapp-glow { animation: pulse-glow 2s infinite; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="aura-bg">
+        <div class="aura-blob blob-1"></div>
+        <div class="aura-blob blob-2"></div>
+        <div class="aura-blob blob-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <nav class="fixed w-full z-50 top-0 left-0 px-4 py-4">
+        <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-600 to-blue-600 flex items-center justify-center font-bold text-white shadow-[0_0_15px_rgba(168,85,247,0.5)]">A</div>
+                <span class="font-bold tracking-tight text-lg text-white">AETHERIA</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#demo" class="hover:text-white transition">Showcase</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+            <a href="https://wa.me/6285283212205" class="bg-white/10 hover:bg-white/20 px-5 py-2 rounded-full text-sm font-medium text-white transition border border-white/10">
+                Get Access
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative pt-40 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-medium mb-8 animate-[bounce_2s_infinite]">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+            </span>
+            SYSTEM V12.0 ONLINE
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-[1.1]" style="font-family: 'Outfit', sans-serif;">
+            Unleash Your <br>
+            <span class="text-shimmer">Digital Aura</span>
+        </h1>
+
+        <p class="text-gray-400 max-w-2xl text-lg mb-10 leading-relaxed mx-auto">
+            Platform AI generasi terbaru yang menggabungkan keindahan visual dan kecerdasan komputasi. 
+            <span class="text-white font-medium">Lebih Cepat. Lebih Cerdas. Lebih Fenomenal.</span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-20 items-center justify-center">
+            <a href="https://wa.me/6285283212205" class="btn-beam group">
+                <span class="btn-content">
+                    Start Building Now 
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </span>
+            </a>
+            <button class="px-8 py-3.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white transition font-medium flex items-center gap-2">
+                <i class="fa-solid fa-play text-xs"></i> Watch Showreel
+            </button>
+        </div>
+
+        <div class="relative w-full max-w-5xl mx-auto rounded-xl border border-white/10 bg-[#0a0a0a] p-2 shadow-[0_0_50px_rgba(168,85,247,0.2)] transform hover:scale-[1.02] transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-transparent pointer-events-none rounded-xl"></div>
+            <img src="https://cdn.dribbble.com/users/418188/screenshots/16386566/media/58509311667104d538622c544e3d304c.png?resize=1200x900&vertical=center" 
+                 alt="Aetheria Dashboard" class="w-full rounded-lg opacity-90 hover:opacity-100 transition-opacity">
+        </div>
+    </section>
+
+    <section class="py-32 px-6 relative z-10" id="features">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4" style="font-family: 'Outfit', sans-serif;">Bombastic Features</h2>
+                <p class="text-gray-400">Komponen canggih yang siap meledakkan produktivitas Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="cards-container">
+                
+                <div class="md:col-span-2 spotlight-card rounded-3xl p-8 group h-80">
+                    <div class="spotlight-content h-full flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4 border border-purple-500/30">
+                                <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Aura Intelligence</h3>
+                            <p class="text-gray-400">AI yang memprediksi kebutuhan Anda sebelum Anda memintanya. </p>
+                        </div>
+                        <div class="w-full h-1/2 bg-gradient-to-r from-purple-500/20 to-transparent rounded-xl border border-white/5 mt-4 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card rounded-3xl p-8 group h-80">
+                    <div class="spotlight-content">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 mb-4 border border-blue-500/30">
+                            <i class="fa-solid fa-shield-cat text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Quantum Secure</h3>
+                        <p class="text-gray-400">Enkripsi level militer. Data Anda aman di dalam vault digital kami.</p>
+                        <div class="mt-8 flex justify-center">
+                            <i class="fa-solid fa-fingerprint text-6xl text-white/10 group-hover:text-blue-500/40 transition-colors duration-500"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card rounded-3xl p-8 group h-80">
+                    <div class="spotlight-content flex flex-col h-full justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 mb-4 border border-green-500/30">
+                                <i class="fa-solid fa-bolt text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Lightning Fast</h3>
+                            <p class="text-gray-400">Optimasi Wusssss! Loading time di bawah 0.5 detik.</p>
+                        </div>
+                         <div class="w-full bg-gray-800 rounded-full h-2 mt-4 overflow-hidden">
+                            <div class="bg-green-500 h-2 rounded-full w-[90%] shadow-[0_0_10px_#22c55e]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="md:col-span-2 spotlight-card rounded-3xl p-8 group h-80">
+                    <div class="spotlight-content flex items-center gap-8 h-full">
+                        <div class="flex-1">
+                            <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 mb-4 border border-pink-500/30">
+                                <i class="fa-solid fa-globe text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Global Network</h3>
+                            <p class="text-gray-400">Terhubung dengan server di seluruh dunia tanpa latensi.</p>
+                        </div>
+                        <div class="flex-1 h-full bg-white/5 rounded-xl border border-white/5 p-4 relative overflow-hidden flex items-center justify-center">
+                             <i class="fa-solid fa-earth-americas text-8xl text-white/10 animate-[spin_10s_linear_infinite]"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#050505] border-t border-white/10" id="contact">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Visit HQ</h2>
+                <p class="text-gray-400 mb-8">
+                    Temui tim di balik Aetheria. Kami berlokasi di pusat inovasi digital.
+                </p>
+                <div class="map-frame w-full h-64 overflow-hidden rounded-2xl border border-white/10">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.331289659039!2d106.7360256!3d-6.2200154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fa02b5455555%3A0x7777777777777777!2sCiledug!5e0!3m2!1sid!2sid!4v1600000000000!5m2!1sid!2sid" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center">
+                <h2 class="text-3xl font-bold mb-6">Stay Connected</h2>
+                <div class="space-y-4">
+                    <a href="#" class="block p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition flex items-center gap-4">
+                        <i class="fa-brands fa-instagram text-2xl text-purple-400"></i>
+                        <span>@aetheria.os</span>
+                    </a>
+                    <a href="#" class="block p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition flex items-center gap-4">
+                        <i class="fa-brands fa-twitter text-2xl text-blue-400"></i>
+                        <span>@aetheria_tech</span>
+                    </a>
+                    <a href="mailto:hello@aetheria.com" class="block p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition flex items-center gap-4">
+                        <i class="fa-solid fa-envelope text-2xl text-green-400"></i>
+                        <span>hello@aetheria.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-black text-center border-t border-white/10 text-gray-600 text-sm">
+        <p>&copy; 2026 Aetheria Inc. Powered by <a href="#" class="text-gray-500 hover:text-white">CiledugPromo Network</a>.</p>
+    </footer>
+
+    <a href="https://wa.me/6285283212205?text=Halo%20Admin%20Aetheria,%20saya%20tertarik%20dengan%20platform%20ini." 
+       class="fixed bottom-8 right-8 z-[100] group">
+        <div class="relative flex items-center justify-center">
+            <div class="absolute inset-0 rounded-full bg-green-500 blur-xl opacity-50 whatsapp-glow"></div>
+            <div class="relative w-16 h-16 bg-[#0a0a0a] border border-green-500/50 rounded-full flex items-center justify-center text-green-500 shadow-2xl hover:scale-110 transition-transform duration-300">
+                <i class="fa-brands fa-whatsapp text-3xl"></i>
+            </div>
+            <span class="absolute right-20 bg-black/80 backdrop-blur px-3 py-1 rounded-lg border border-white/10 text-xs font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Chat Support
+            </span>
+        </div>
+    </a>
+
+    <script>
+        // --- 1. SPOTLIGHT EFFECT (MOUSE TRACKING) ---
+        const cards = document.querySelectorAll('.spotlight-card');
+        const container = document.getElementById('cards-container');
+
+        if(container) {
+            container.onmousemove = e => {
+                for(const card of cards) {
+                    const rect = card.getBoundingClientRect(),
+                          x = e.clientX - rect.left,
+                          y = e.clientY - rect.top;
+
+                    card.style.setProperty("--mouse-x", `${x}px`);
+                    card.style.setProperty("--mouse-y", `${y}px`);
+                }
+            };
+        }
+
+        // --- 2. GSAP REVEAL ANIMATIONS ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Content
+        gsap.from("h1", { duration: 1.5, y: 50, opacity: 0, ease: "power4.out", delay: 0.2 });
+        gsap.from(".dashboard-mockup", { 
+            duration: 1.5, 
+            y: 100, 
+            opacity: 0, 
+            rotationX: 20, 
+            ease: "power4.out", 
+            delay: 0.5 
+        });
+
+        // Features Reveal
+        gsap.utils.toArray('.spotlight-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 90%"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                delay: i * 0.1
+            });
+        });
+    </script>
+</body>
+</html>
